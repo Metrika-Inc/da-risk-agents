@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "metrika": {
+      "type": "http",
+      "url": "https://mcp.metrika.co/mcp"
+    }
+  }
+}

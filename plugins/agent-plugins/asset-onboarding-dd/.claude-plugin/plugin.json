@@ -1,0 +1,8 @@
+{
+  "name": "asset-onboarding-dd",
+  "version": "0.1.0",
+  "description": "Pre-onboarding risk assessments across peg, reserves, liquidity, chain health, concentration, and sanctions — built on Metrika report frameworks. Drafts a committee recommendation; does not approve onboarding",
+  "author": {
+    "name": "Metrika CEO Office"
+  }
+}

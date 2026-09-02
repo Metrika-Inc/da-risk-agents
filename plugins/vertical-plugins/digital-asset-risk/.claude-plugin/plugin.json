@@ -1,0 +1,8 @@
+{
+  "name": "digital-asset-risk",
+  "version": "0.1.0",
+  "description": "Shared skills, commands, and the Metrika MCP connector for digital-asset risk & compliance workflows",
+  "author": {
+    "name": "Metrika CEO Office"
+  }
+}

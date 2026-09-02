@@ -1,0 +1,42 @@
+GLOSSARY
+
+"Anthropic's templates" - It refers to Anthropic's open-source example repository anthropics/financial-services, which shows a recommended way to structure role-based agents as plugins. This project copies that structure. When the write-up says "modeled on Anthropic's pattern," this repo is what it means
+
+Vertical plugin — the shared plugin ("Digital Asset Risk"). Holds the skills, the slash commands, and the Metrika connector that all three agents rely on. Installed first; it's the single source of truth.
+
+Agent plugin — a plugin for one agent (Risk Controller, Onboarding DD, or Risk Reporting). Contains that agent's system prompt plus its own copies of the skills it needs, so it's self-contained.
+
+Claude Cowork ("Cowork") — a mode of Claude built for getting work done, where agents, skills, and connected tools run. These plugins are used in Cowork (in plain "Chat" mode, the agent parts are inactive).
+
+Claude Code — Anthropic's command-line coding tool. It uses the same plugin format, which is why the install steps mention it as an alternative.
+
+Connector — a link from Claude to an outside service so it can read that service's data. Here, the connector links to Metrika.
+
+Skill — a self-contained "how we do X" reference that Claude loads automatically when relevant (a SKILL.md file). Example: the morning-brief skill tells the agent how to build a briefing. Skills are plain text — editing one needs no coding.
+
+Slash command — a shortcut you type starting with / (e.g. /morning-brief) that kicks off a defined task. A faster alternative to describing the task in words.
+
+Plugin — a bundle that packages skills, commands, connectors, and sub-agents so you get a ready-to-use setup in one install. This project ships four plugins (one shared + three agents).
+
+Guardrail floor — the three skills every agent must include (review-gate, risk-evidence, metrika-mcp). A check script fails the build if any agent drops them.
+
+Agent — in the Claude sense, a configured "persona + instructions + tools" that carries out a kind of task. Each of the three deliverables is an agent.
+
+Sub-agent — an agent bundled inside a plugin that Claude can call on. These only run in Cowork.
+
+System prompt — the built-in instructions that define an agent's role, what it produces, and its rules. In this project it's the agents/<name>.md file for each agent.
+
+Mutation gate — the rule that before any mutation, the agent must stop, explain what it would do, and wait for an explicit human "yes" — and even then only ever create a draft.
+
+Draft work product — the core principle: every agent output is a draft for a qualified human to review and sign off, never a final decision or an executed action.
+
+Read-only vs mutation tools — read-only tools just look at Metrika data (safe; the default). Mutation tools change something in Metrika and cost money to run. The agents avoid mutations by default.
+
+Mutation gate — the rule that before any mutation, the agent must stop, explain what it would do, and wait for an explicit human "yes" — and even then only ever create a draft.
+
+Agent — in the Claude sense, a configured "persona + instructions + tools" that carries out a kind of task. Each of the three deliverables is an agent.
+
+Sub-agent — an agent bundled inside a plugin that Claude can call on. These only run in Cowork.
+
+System prompt — the built-in instructions that define an agent's role, what it produces, and its rules. In this project it's the agents/<name>.md file for each agent.
+

@@ -1,0 +1,8 @@
+{
+  "name": "risk-controller",
+  "version": "0.1.0",
+  "description": "Morning risk briefings, incident triage, KRI-spike explanations, and escalation memos — draft work product, every claim cited to Metrika",
+  "author": {
+    "name": "Metrika CEO Office"
+  }
+}

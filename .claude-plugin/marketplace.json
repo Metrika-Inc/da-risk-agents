@@ -1,0 +1,36 @@
+{
+  "name": "metrika-digital-asset-risk",
+  "owner": {
+    "name": "Metrika — CEO Office (internship prototype)"
+  },
+  "metadata": {
+    "description": "Claude agent templates for digital-asset risk & compliance, wired to the Metrika MCP server as the live data layer. Draft work product only — every output is staged for a qualified human reviewer.",
+    "autonomyLevel": "Level 2-3 (AI co-pilot / human-supervised). Not autonomous execution."
+  },
+  "plugins": [
+    {
+      "name": "digital-asset-risk",
+      "displayName": "Digital Asset Risk (shared)",
+      "source": "./plugins/vertical-plugins/digital-asset-risk",
+      "description": "Shared skills, slash commands, and the Metrika MCP connector for digital-asset risk & compliance. Install this first — the agents bundle its skills."
+    },
+    {
+      "name": "risk-controller",
+      "displayName": "Digital Asset Risk Controller",
+      "source": "./plugins/agent-plugins/risk-controller",
+      "description": "Morning risk briefings, incident triage, KRI-spike explanations, and escalation memos — as review-ready drafts, every claim cited to a Metrika KRI id or deep-link."
+    },
+    {
+      "name": "asset-onboarding-dd",
+      "displayName": "Token / Asset Onboarding Due Diligence",
+      "source": "./plugins/agent-plugins/asset-onboarding-dd",
+      "description": "Pre-onboarding risk assessments (peg, reserves, liquidity, chain health, concentration, sanctions) built on Metrika report templates. Drafts a recommendation memo for the onboarding committee — it does not approve onboarding."
+    },
+    {
+      "name": "risk-reporting",
+      "displayName": "Risk Reporting & Governance Analyst",
+      "source": "./plugins/agent-plugins/risk-reporting",
+      "description": "Board / risk-committee packs from KRI trends and incident history. Assembles a review-ready draft pack; the committee owns the decisions."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "risk-reporting",
+  "version": "0.1.0",
+  "description": "Board / risk-committee risk packs from Metrika KRI trends and incident history — a review-ready draft pack rendered to pptx/docx, fully cited",
+  "author": {
+    "name": "Metrika CEO Office"
+  }
+}
