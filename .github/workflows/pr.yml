@@ -1,7 +1,5 @@
 name: Pull Request
 
-# Addresses the Vanta control `github-code-change-automated-checks-enabled`.
-
 on:
   pull_request:
     types: [opened, synchronize, reopened]
