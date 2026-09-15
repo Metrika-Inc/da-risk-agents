@@ -1,6 +1,5 @@
 name: Pull Request
 
-# This repo had no workflows at all. It is Claude plugin definitions — JSON manifests and SKILL.md files — so the check that matters is that the manifests parse. A malformed plugin.json breaks every install of the plugin.
 # Addresses the Vanta control `github-code-change-automated-checks-enabled`.
 
 on:
